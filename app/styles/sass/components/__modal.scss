@@ -19,27 +19,27 @@
         width: 470px;
     }
 
-    &-form__close {
+    &__window {
+        background-color: var(--secondary-bg-color);
+        border-radius: 10px;
+    }
+
+    &__window-close {
         color: var(--third-text-color);
         font-size: 58px;
         cursor: pointer;
         float: right;
         font-weight: bold;
         padding-right: 10px;
+
+        &:hover {
+            color: var(--primary-button-color);
+            transform: rotate(360deg);
+            transition: 100ms;
+        }
     }
 
-    &-form__close:hover {
-        color: var(--primary-button-color);
-        transform: rotate(360deg);
-        transition: 100ms;
-    }
-
-    &-form {
-        background-color: var(--secondary-bg-color);
-        border-radius: 10px;
-    }
-
-    &-form__title {
+    &__window-title {
         font-family: 'Open Sans';
         font-weight: 700;
         font-size: 24px;
@@ -48,65 +48,35 @@
         text-align: center;
         padding: 33px 0;
         margin-bottom: 45px;
+
+        & span {
+            color: #EC7979;
+        }
     }
 
-    &-form__title span {
-        color: #EC7979;
-    }
-
-    &-form__wrapper {
+    &__window-wrapper {
         display: flex;
         flex-direction: column;
         margin-bottom: 75px;
     }
 
-    &-form__input {
+    &__window-input {
         background-color: var(--secondary-bg-color);
         margin: 0 50px;
         margin-bottom: 33px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
     }
 
-    &-form__input:last-child {
-        margin-bottom: 0px;
-    }
-
-    &-form__input-text {
-        outline: none;
-        border: none;
-        padding-bottom: 16px;
-        border-bottom: 1px solid #BDBDBD;
-        min-width: 100%;
-    }
-
-    &-form__input-text::placeholder {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: .9;
-        color: #BDBDBD;
-    }
-
-    &-form__button {
+    &__window-button {
         margin-top: auto;
-    }
 
-    &-form__button:hover,
-    &-form__button:focus,
-    &-form__button:active {
-        background-color: #813535;
-    }
-
-    &-form__button-text {
-        font-family: 'Open Sans';
-        font-weight: 600;
-        font-size: 15px;
-        line-height: .9;
-        width: 100%;
-        color: var(--secondary-text-color);
-        background: var(--primary-button-color);
-        border-radius: 0 0 10px 10px;
-        border: none;
-        padding: 22px 0;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: #813535;
+        }
     }
 }

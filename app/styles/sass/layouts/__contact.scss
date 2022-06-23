@@ -21,23 +21,23 @@
     }
 
     &__form-list {
-        @include breakpoint(md) {
+        @include breakpoint(sm) {
             margin-bottom: 50px;
         }
-    }
 
-    &__form-list:last-child {
-        @include breakpoint(md) {
-            margin-bottom: 0;
+        &:last-child {
+            @include breakpoint(md) {
+                margin-bottom: 0;
+            }
         }
     }
 
     &__form-item {
         margin-bottom: 34px;
-    }
 
-    &__form-item:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__form-input {
@@ -47,19 +47,19 @@
         padding: 16px 0;
         border-bottom: 1px solid #BDBDBD;
         margin-bottom: 50px;
-    }
 
-    &__form-input:last-child {
-        margin-bottom: 0px;
-    }
+        &:last-child {
+            margin-bottom: 0px;
+        }
 
-    &__form-input::placeholder {
-        font-family: 'Open Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: .9;
-        color: #BDBDBD;
+        &::placeholder {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: .9;
+            color: #BDBDBD;
+        }
     }
 
     &__form-message {

@@ -1,4 +1,15 @@
 .tabs {
+    padding-top: 100px;
+    padding-bottom: 25px;
+
+    @include breakpoint(xl) {
+        padding-top: 50px;
+        padding-bottom: 25px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 25px;
+    }
 
     &__tab {
         display: flex;
@@ -22,14 +33,14 @@
         @include breakpoint(sm) {
             padding: 10px 40px;
         }
+    }
 
-        &:focus,
-        &_active {
-            border-top: 1px solid #C6CBCD;
-            border-right: 1px solid #C6CBCD;
-            border-left: 1px solid #C6CBCD;
-            border-bottom: 2px solid #FFFFFF;
-        }
+    &__item:focus,
+    &__item_active {
+        border-top: 1px solid #C6CBCD;
+        border-right: 1px solid #C6CBCD;
+        border-left: 1px solid #C6CBCD;
+        border-bottom: 2px solid #FFFFFF;
     }
 
     &__card {
@@ -99,10 +110,10 @@
             font-size: 13px;
             margin-bottom: 29px;
         }
+    }
 
-        & p {
-            padding-bottom: 20px;
-        }
+    &__card-text p {
+        padding-bottom: 20px;
     }
 
     &__card-button {

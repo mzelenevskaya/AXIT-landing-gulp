@@ -74,22 +74,31 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTo();
     }());
 
-    // tab
-    function openCity(evt, target) {
-        var i, tabs__card, tabs__item;
+    // tabs
+    var tabLinks = document.querySelectorAll(".tabs__item");
+    var tabContent = document.querySelectorAll(".tabs__card");
 
-        tabs__card = document.getElementsByClassName("tabs__card");
-        for (i = 0; i < tabs__card.length; i++) {
-            tabs__card[i].style.display = "none";
-        }
 
-        tabs__item = document.getElementsByClassName("tabs__item");
-        for (i = 0; i < tabs__item.length; i++) {
-            tabs__item[i].className = tabs__item[i].className.replace("active", "");
-        }
+    tabLinks.forEach(function (el) {
+        el.addEventListener("click", openTabs);
+    });
 
-        document.getElementById(target).style.display = "block";
-        evt.currentTarget.className += " active";
+
+    function openTabs(el) {
+        var btnTarget = el.currentTarget;
+        var type = btnTarget.dataset.type;
+
+        tabContent.forEach(function (el) {
+            el.classList.remove("tabs__card_show");
+        });
+
+        tabLinks.forEach(function (el) {
+            el.classList.remove("tabs__card_show");
+        });
+
+        document.querySelector("#" + type).classList.add("tabs__card_show");
+
+        btnTarget.classList.add("active");
     }
 
     // theme
@@ -108,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // modal window
     const myBtn = document.querySelector('#myButton');
-    const closeBtn = document.querySelector('.modal-form__close');
+    const closeBtn = document.querySelector('.modal__window-close');
     const modal = document.querySelector('.modal');
 
     function toggleModal() {

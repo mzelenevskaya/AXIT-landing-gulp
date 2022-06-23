@@ -1,102 +1,101 @@
 .pricing {
-        padding-top: 100px;
-        padding-bottom: 50px;
-        text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+
+    @include breakpoint(xl) {
+        padding-top: 50px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 40px;
+        padding-bottom: 25px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 30px;
+    }
+
+    &__head {
+        margin-bottom: 79px;
 
         @include breakpoint(xl) {
-                padding-top: 50px;
-        }
-
-        @include breakpoint(md) {
-                padding-top: 40px;
-                padding-bottom: 25px;
+            margin-bottom: 50px;
         }
 
         @include breakpoint(sm) {
-                padding-top: 30px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__card {
+        @include breakpoint(md) {
+            margin-bottom: 27px;
         }
 
-        &-card {
-                @include breakpoint(sm) {
-                        margin-bottom: 27px;
-                }
+        &_active {
+            transform: translateY(-5%);
+
+            @include breakpoint(md) {
+                transform: translateY(0%);
+            }
         }
+    }
 
+    &__card-title {
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.5;
+        color: var(--secondary-text-color);
+        background-color: var(--card-bg-color);
+        border: 2px solid #F5F5F5;
+        padding: 13px 0;
 
-        &__head {
-                margin-bottom: 79px;
-
-                @include breakpoint(xl) {
-                        margin-bottom: 50px;
-                }
-
-                @include breakpoint(sm) {
-                        margin-bottom: 24px;
-                }
+        @include breakpoint(sm) {
+            font-size: 18px;
+            padding: 15px 0;
         }
+    }
 
-        &-card_active {
-                transform: translateY(-5%);
+    &__card-price {
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 2.2;
+        color: var(--secondary-text-color);
+        background-color: var(--card-bg-color);
+        border: 2px solid #F5F5F5;
+        padding: 20px 0;
 
-                @include breakpoint(md) {
-                        transform: translateY(0%);
-                }
+        @include breakpoint(sm) {
+            font-size: 24px;
+            padding: 27px 0;
         }
+    }
 
-        &-card__title {
-                font-family: 'Open Sans';
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 1.5;
-                color: var(--secondary-text-color);
-                background-color: var(--card-bg-color);
-                border: 2px solid #F5F5F5;
-                padding: 13px 0;
+    &__card-text {
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.5);
+        background-color: var(--card-bg-color);
+        border: 2px solid #F5F5F5;
+        padding: 15px 0;
 
-                @include breakpoint(sm) {
-                        font-size: 18px;
-                        padding: 15px 0;
-                }
+        @include breakpoint(sm) {
+            font-size: 14px;
+            padding: 13px 0;
         }
+    }
 
-        &-card__price {
-                font-family: 'Raleway';
-                font-weight: 700;
-                font-size: 36px;
-                line-height: 2.2;
-                color: var(--secondary-text-color);
-                background-color: var(--card-bg-color);
-                border: 2px solid #F5F5F5;
-                padding: 20px 0;
+    &__card-list {
+        list-style: none;
+    }
 
-                @include breakpoint(sm) {
-                        font-size: 24px;
-                        padding: 27px 0;
-                }
-        }
-
-        &-card__text {
-                font-family: 'Raleway';
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 1.2;
-                color: rgba(255, 255, 255, 0.5);
-                background-color: var(--card-bg-color);
-                border: 2px solid #F5F5F5;
-                padding: 15px 0;
-
-                @include breakpoint(sm) {
-                        font-size: 14px;
-                        padding: 13px 0;
-                }
-        }
-
-        &-card__list {
-                list-style: none;
-        }
-
-        &-card__list-item {
-                border: 2px solid #F5F5F5;
-                padding: 15px 0;
-        }
+    &__card-list-item {
+        border: 2px solid #F5F5F5;
+        padding: 15px 0;
+    }
 }

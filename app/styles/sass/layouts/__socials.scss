@@ -6,7 +6,7 @@
         padding: 31px 0;
     }
 
-    &-info {
+    &__info {
         padding-bottom: 18px;
 
         @include breakpoint(sm) {
@@ -14,7 +14,7 @@
         }
     }
 
-    &-info__title {
+    &__info-title {
         color: #333333;
         font-family: 'Open Sans';
         font-weight: 700;
@@ -30,7 +30,7 @@
         }
     }
 
-    &-info__text {
+    &__info-text {
         font-family: 'Raleway';
         font-weight: 400;
         font-size: 18px;
@@ -41,7 +41,7 @@
         }
     }
 
-    &-head__links {
+    &__head-links {
         display: flex;
         flex-wrap: wrap;
         list-style: none;
@@ -52,7 +52,7 @@
         }
     }
 
-    &-head__link {
+    &__head-link {
         width: calc(14.2% - 20px);
         margin: 0 10px;
     }

@@ -4,6 +4,7 @@
 
     &__row {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -20,32 +21,31 @@
 
     &__links {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         align-items: center;
         justify-content: center;
         padding-top: 40px;
         padding-bottom: 30px;
         margin: 0 -20px;
-    }
 
-    @include breakpoint(xl) {
-        .footer__links {
+        @include breakpoint(xl) {
             padding-bottom: 40px;
         }
 
-        @media (max-width: 560x) {
+        @include breakpoint(sm) {
             padding-bottom: 44px;
         }
     }
 
     &__link {
         margin: 0 20px;
-    }
 
-    &__link:hover,
-    &__link:focus,
-    &__link:active {
-        opacity: .6;
+        &:hover,
+        &:focus,
+        &:active {
+            opacity: .6;
+        }
     }
 
     &__copyright {
@@ -57,7 +57,7 @@
         color: rgba(255, 255, 255, 0.5);
         align-self: center;
 
-        @media (max-width:1200px) {
+        @include breakpoint(xl) {
             font-size: 14px;
         }
     }
