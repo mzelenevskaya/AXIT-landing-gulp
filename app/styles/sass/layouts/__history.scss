@@ -1,0 +1,13 @@
+.history {
+        padding-top: 100px;
+        padding-bottom: 25px;
+
+        @include breakpoint(xl) {
+                padding-top: 50px;
+                padding-bottom: 25px;
+        }
+
+        @include breakpoint(sm) {
+                padding-top: 25px;
+        }
+}

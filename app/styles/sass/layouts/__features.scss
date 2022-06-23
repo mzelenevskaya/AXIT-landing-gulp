@@ -1,0 +1,88 @@
+.features {
+    padding-top: 100px;
+    padding-bottom: 50px;
+    text-align: center;
+
+    @include breakpoint(xl) {
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 75px;
+    }
+
+    &__cards {
+        margin-top: 110px;
+
+        @include breakpoint(sm) {
+            margin-top: 83px;
+        }
+    }
+
+    &-card {
+        margin-top: 110px;
+
+        @include breakpoint(sm) {
+            margin-bottom: 43px;
+        }
+    }
+
+    &-card:last-child {
+        @include breakpoint(sm) {
+            margin-bottom: 0;
+        }
+    }
+
+
+    &-card__img {
+        border-radius: 50%;
+        border: 1px solid #EC7979;
+        width: 92px;
+        height: 92px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;
+
+        @include breakpoint(sm) {
+            width: 79px;
+            height: 79px;
+        }
+    }
+
+    &-card__title {
+        color: var(--third-text-color);
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 38px 0;
+        margin: 39px 0;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+            padding: 32px 0;
+            margin: 33px 0;
+        }
+
+        @include breakpoint(sm) {
+            font-size: 18px;
+            padding: 32px 0;
+            margin-bottom: 9px;
+        }
+    }
+
+    &-card__text {
+        color: var(--third-text-color);
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+        }
+    }
+}

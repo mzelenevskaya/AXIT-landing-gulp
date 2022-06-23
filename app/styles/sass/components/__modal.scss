@@ -1,0 +1,112 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .8);
+
+    &__content {
+        background-color: #fefefe;
+        color: var(--secondary-text-color);
+        font-size: 1.2em;
+        text-align: center;
+        margin: 15% auto;
+        border-radius: 10px;
+        width: 470px;
+    }
+
+    &-form__close {
+        color: var(--third-text-color);
+        font-size: 58px;
+        cursor: pointer;
+        float: right;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+
+    &-form__close:hover {
+        color: var(--primary-button-color);
+        transform: rotate(360deg);
+        transition: 100ms;
+    }
+
+    &-form {
+        background-color: var(--secondary-bg-color);
+        border-radius: 10px;
+    }
+
+    &-form__title {
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--third-text-color);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 33px 0;
+        margin-bottom: 45px;
+    }
+
+    &-form__title span {
+        color: #EC7979;
+    }
+
+    &-form__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 75px;
+    }
+
+    &-form__input {
+        background-color: var(--secondary-bg-color);
+        margin: 0 50px;
+        margin-bottom: 33px;
+    }
+
+    &-form__input:last-child {
+        margin-bottom: 0px;
+    }
+
+    &-form__input-text {
+        outline: none;
+        border: none;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #BDBDBD;
+        min-width: 100%;
+    }
+
+    &-form__input-text::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: .9;
+        color: #BDBDBD;
+    }
+
+    &-form__button {
+        margin-top: auto;
+    }
+
+    &-form__button:hover,
+    &-form__button:focus,
+    &-form__button:active {
+        background-color: #813535;
+    }
+
+    &-form__button-text {
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 15px;
+        line-height: .9;
+        width: 100%;
+        color: var(--secondary-text-color);
+        background: var(--primary-button-color);
+        border-radius: 0 0 10px 10px;
+        border: none;
+        padding: 22px 0;
+    }
+}

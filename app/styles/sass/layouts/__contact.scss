@@ -1,0 +1,92 @@
+.contact {
+    padding-top: 100px;
+    padding-bottom: 50px;
+
+
+    @include breakpoint(xl) {
+        padding-top: 50px;
+    }
+
+    @include breakpoint(md) {
+        padding-bottom: 40px;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding-top: 89px;
+        padding-bottom: 50px;
+    }
+
+    &__form-list {
+        @include breakpoint(md) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__form-list:last-child {
+        @include breakpoint(md) {
+            margin-bottom: 0;
+        }
+    }
+
+    &__form-item {
+        margin-bottom: 34px;
+    }
+
+    &__form-item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__form-input {
+        width: 100%;
+        outline: none;
+        border: none;
+        padding: 16px 0;
+        border-bottom: 1px solid #BDBDBD;
+        margin-bottom: 50px;
+    }
+
+    &__form-input:last-child {
+        margin-bottom: 0px;
+    }
+
+    &__form-input::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: .9;
+        color: #BDBDBD;
+    }
+
+    &__form-message {
+        width: 100%;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: .9;
+        color: #BDBDBD;
+        outline: none;
+        border: none;
+        padding-bottom: 187px;
+        border-bottom: 1px solid #BDBDBD;
+        resize: none;
+        white-space: normal;
+        vertical-align: middle;
+    }
+
+    &__form-button {
+        display: block;
+        background-color: var(--primary-button-color);
+        padding: 20px 120px;
+        margin: 0 auto;
+
+        @include breakpoint(xl) {
+            padding: 20px 100px;
+        }
+    }
+}

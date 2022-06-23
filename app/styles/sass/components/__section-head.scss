@@ -1,0 +1,67 @@
+.section-head {
+    position: relative;
+    text-align: center;  
+    
+    &__title {
+        position: relative;
+        color: var(--third-text-color);
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 2.2;    
+        margin-bottom: 110px; 
+        text-transform: uppercase;
+
+        @include breakpoint(xl) {
+                font-size: 24px;        
+                margin-bottom: 72px; 
+        }
+    }  
+
+    &__title::after { 
+        content: "";
+        position: absolute; 
+        border-bottom: 1px solid var(--primary-button-color);
+        width: 170px;    
+        top: 50%;  
+        left: 50%; 
+        transform: translate(-50%, -50%);  
+        margin-top: 70px; 
+        
+        @include breakpoint(xl) {
+                width: 142px;    
+        }
+        
+        @include breakpoint(sm) {
+                width: 134px;   
+        }
+    }   
+
+    &__text {    
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+
+        @include breakpoint(xl) {
+                font-size: 14px;
+        }
+        
+        @include breakpoint(sm) {
+                font-size: 13px;
+        }
+    }
+    
+    &_light &__title {
+        color: var(--secondary-text-color); 
+    }
+    
+    &_light &__title::after {
+        border-bottom: 1px solid #ffffff;         
+    }
+    
+    &_light &__text {
+        color: var(--secondary-text-color);  
+    } 
+}
+

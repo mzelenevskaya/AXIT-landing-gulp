@@ -1,0 +1,20 @@
+.prime-btn {
+    display: inline-block;
+    background-color: var(--primary-button-color);
+    color: var(--secondary-text-color);
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid var(--primary-button-color);
+    padding: 20px 0;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #ae4d83;
+        border: 2px solid #ae4d83;
+    }
+}

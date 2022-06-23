@@ -1,0 +1,64 @@
+.footer {
+    width: 100%;
+    background-color: var(--primary-bg-color);
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 27px;
+
+        @include breakpoint(xl) {
+            padding-bottom: 30px;
+        }
+
+        @include breakpoint(sm) {
+            padding-bottom: 45px;
+        }
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 30px;
+        margin: 0 -20px;
+    }
+
+    @include breakpoint(xl) {
+        .footer__links {
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 560x) {
+            padding-bottom: 44px;
+        }
+    }
+
+    &__link {
+        margin: 0 20px;
+    }
+
+    &__link:hover,
+    &__link:focus,
+    &__link:active {
+        opacity: .6;
+    }
+
+    &__copyright {
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+        color: rgba(255, 255, 255, 0.5);
+        align-self: center;
+
+        @media (max-width:1200px) {
+            font-size: 14px;
+        }
+    }
+}

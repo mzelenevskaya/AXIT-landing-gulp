@@ -1,0 +1,212 @@
+.promo {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 283px;
+    padding-bottom: 185px;
+    background-image: linear-gradient(360deg,
+            rgba(0, 0, 0, .5) 0%,
+            rgba(0, 0, 0, .5) 100%),
+        url("../images/src/promo/promomain.png");
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: center center;
+
+    @include breakpoint(xl) {
+        padding-top: 212px;
+        padding-bottom: 106px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    @include breakpoint(sm) {
+        padding-top: 140px;
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &-content {
+        padding-top: 23px;
+        z-index: 1;
+
+        @include breakpoint(xl) {
+            padding-top: 17px;
+        }
+
+        @include breakpoint(lg) {
+            padding-bottom: 50px;
+        }
+    }
+
+    &-content__img {
+        padding-bottom: 73px;
+
+        @include breakpoint(xl) {
+            padding-bottom: 54px;
+        }
+
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+
+    &-content__title {
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 48px;
+        font-style: normal;
+        color: var(--secondary-text-color);
+        margin-bottom: 42px;
+
+        @include breakpoint(xl) {
+            font-size: 36px;
+            margin-bottom: 31px;
+        }
+
+        @include breakpoint(sm) {
+            text-align: center;
+        }
+    }
+
+    &-content__title::after {
+        content: "";
+        border-bottom: 1px solid #FFFFFF;
+        width: 170px;
+        display: block;
+        margin: 55px 0 0;
+
+        @include breakpoint(xl) {
+            width: 115px;
+            margin: 42px 0 0;
+        }
+
+        @include breakpoint(sm) {
+            width: 134px;
+            margin: 42px auto 0;
+        }
+    }
+
+    &-content__text {
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+        color: var(--secondary-text-color);
+        margin-bottom: 42px;
+
+        @include breakpoint(xl) {
+            font-size: 14px;
+            margin-bottom: 31px;
+        }
+
+        @include breakpoint(sm) {
+            text-align: center;
+        }
+    }
+
+    &-content__button {
+        background: inherit;
+        border: 2px solid var(--secondary-button-color);
+        padding: 20px 90px;
+
+        @include breakpoint(xl) {
+            padding: 13px 46px;
+        }
+
+        @include breakpoint(sm) {
+            display: block;
+            margin: 0 auto;
+            padding: 15px 100px;
+        }
+    }
+
+    &-input {
+        z-index: 0;
+        max-width: 470px;
+
+        @include breakpoint(xl) {
+            max-width: 398px;
+        }
+
+        @include breakpoint(sm) {
+            margin: 0 auto;
+        }
+    }
+
+    &-form {
+        background-color: var(--secondary-bg-color);
+        border-radius: 10px;
+    }
+
+    &-form__title {
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--third-text-color);
+        text-transform: uppercase;
+        text-align: center;
+        padding: 33px 0;
+        margin-bottom: 45px;
+
+        @include breakpoint(xl) {
+            font-size: 18px;
+            padding: 36px 0;
+        }
+    }
+
+    &-form__title span {
+        color: #EC7979;
+    }
+
+    &-form__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 75px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    &-form__input {
+        background-color: var(--secondary-bg-color);
+        margin-bottom: 17px;
+    }
+
+    &-form__input:last-child {
+        margin-bottom: 0px;
+    }
+
+    &-form__input-text {
+        outline: none;
+        border: none;
+        padding: 16px 0;
+        border-bottom: 1px solid #BDBDBD;
+        min-width: 100%;
+        background: var(--secondary-bg-color);
+    }
+
+    &-form__input-text::placeholder {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: .9;
+        color: #BDBDBD;
+    }
+
+    &-form__button-form {
+        font-size: 15px;
+        line-height: .9;
+        width: 100%;
+        margin-top: auto;
+        border-radius: 0 0 10px 10px;
+    }
+
+    &-form__button-form:hover {
+        background-color: #813535;
+    }
+}

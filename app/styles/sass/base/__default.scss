@@ -1,0 +1,61 @@
+:root {
+    --primary-bg-color: #000000;
+    --secondary-bg-color: #FFFFFF;
+    --primary-text-color: #86878B;
+    --secondary-text-color: #FFFFFF;
+    --third-text-color: #000000;
+    --primary-button-color: #EC7979;
+    --secondary-button-color: #FFFFFF;
+    --card-bg-color: #333333;
+    --content-width: 1170px;
+    --mobile-padding: 15px;
+    --gutter: 15px;
+
+    @include breakpoint(xl) {
+        --gutter: 10px;
+    }
+}
+
+[data-theme="dark"] {
+    --primary-bg-color: #86878B;
+    --secondary-bg-color: #7d7373;
+    --primary-text-color: #1a285e;
+    --secondary-text-color: #FFFFFF;
+    --third-text-color: #3e1111;
+    --primary-button-color: #79eca5;
+    --secondary-button-color: #f86ea7;
+    --card-bg-color: #5b465e;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+ul,
+li,
+p {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway';
+    color: var(--primary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

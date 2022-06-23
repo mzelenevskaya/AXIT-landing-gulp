@@ -1,0 +1,144 @@
+.reviews {
+        padding-top: 100px;
+        padding-bottom: 64px;
+
+        @include breakpoint(xl) {
+                padding-top: 50px;
+                padding-bottom: 57px;
+        }
+
+        &__row {
+                padding-top: 83px;
+
+                @include breakpoint(xl) {
+                        padding-top: 32px;
+                }
+
+                @include breakpoint(md) {
+                        margin-bottom: 30px;
+                }
+        }
+
+        &-card {
+                @include breakpoint(md) {
+                        margin-bottom: 30px;
+                }
+        }
+
+        &-card:last-child {
+                @include breakpoint(md) {
+                        margin-bottom: 0;
+                }
+        }
+
+        &-card__feedback {
+                position: relative;
+                background-color: #E2E2E2;
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.2;
+                text-align: center;
+                padding: 38px 0;
+                border: 1px solid transparent;
+                border-radius: 10px;
+                margin-bottom: 66px;
+
+                @include breakpoint(xl) {
+                        font-size: 14px;
+                        padding: 50px 0;
+                        margin-bottom: 46px;
+                }
+
+                @include breakpoint(md) {
+                        margin-bottom: 42px;
+                }
+        }
+
+        &-card__feedback::after {
+                content: "";
+                position: absolute;
+                left: 25px;
+                bottom: -20px;
+                border: 10px solid transparent;
+                border-top: 10px solid #E2E2E2;
+
+                @include breakpoint(xl) {
+                        content: "";
+                        position: absolute;
+                        left: 30px;
+                        bottom: -20px;
+                        border: 10px solid transparent;
+                        border-top: 10px solid #E2E2E2;
+                }
+        }
+
+        &-card__author {
+                display: flex;
+                align-items: flex-start;
+        }
+
+        &-card__author-img {
+                align-items: flex-start;
+                width: 72px;
+                height: 72px;
+                border-radius: 50%;
+
+                @include breakpoint(xl) {
+                        width: 63px;
+                        height: 63px;
+                }
+
+                @include breakpoint(sm) {
+                        width: 57px;
+                        height: 57px;
+                }
+        }
+
+        &-card__author-info {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-left: 30px;
+
+                @include breakpoint(xl) {
+                        margin-left: 23px;
+                }
+        }
+
+        &-card__author-name {
+                color: var(--third-text-color);
+                font-family: 'Open Sans';
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 1.5;
+                padding: 15px 0;
+                margin-bottom: 15px;
+
+                @include breakpoint(xl) {
+                        font-size: 18px;
+                        padding: 9px 0;
+                        margin-bottom: 9px;
+                }
+
+                @include breakpoint(sm) {
+                        font-size: 14px;
+                }
+        }
+
+        &-card__author-work {
+                color: var(--third-text-color);
+                font-family: 'Raleway';
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.2;
+
+                @include breakpoint(xl) {
+                        font-size: 14px;
+                }
+
+                @include breakpoint(sm) {
+                        font-size: 13px;
+                }
+        }
+}

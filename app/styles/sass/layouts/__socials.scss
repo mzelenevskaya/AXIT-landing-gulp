@@ -1,0 +1,59 @@
+.socials {
+    background-color: #F8EFEF;
+
+    @include breakpoint(sm) {
+        text-align: center;
+        padding: 31px 0;
+    }
+
+    &-info {
+        padding-bottom: 18px;
+
+        @include breakpoint(sm) {
+            padding-bottom: 35px;
+        }
+    }
+
+    &-info__title {
+        color: #333333;
+        font-family: 'Open Sans';
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 27px 0;
+        margin-bottom: 18px;
+
+        @include breakpoint(sm) {
+            font-size: 18px;
+            padding: 13px 0;
+            margin-bottom: 13px;
+        }
+    }
+
+    &-info__text {
+        font-family: 'Raleway';
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.2;
+
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
+    }
+
+    &-head__links {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        align-items: center;
+
+        @include breakpoint(sm) {
+            margin: 0 auto;
+        }
+    }
+
+    &-head__link {
+        width: calc(14.2% - 20px);
+        margin: 0 10px;
+    }
+}
